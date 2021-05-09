@@ -34,7 +34,7 @@ class AdDetailView(OwnerDetailView):
 
 class AdCreateView(LoginRequiredMixin, View):
 	template_name = 'ads/ad_form.html'
-	success_url = reverse_lazy('pics:all')
+	success_url = reverse_lazy('ads:all')
 
 	def get(self, request, pk=None):
 		form = CreateForm()
